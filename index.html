@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Emmanuel A. Orona Espinosa — CV</title>
+<meta name="description" content="CV de Emmanuel Alejandro Orona Espinosa: Ingeniería en Sistemas, Soporte, Redes, Ubiquiti, Linux, Moodle, Google Workspace, VPS." />
+<meta name="robots" content="index,follow" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2300E5FF' d='M12 2A10 10 0 1 0 22 12 10.011 10.011 0 0 0 12 2Zm-1 5h2v7h-2Zm0 8h2v2h-2Z'/%3E%3C/svg%3E">
+
+<style>
+  :root{
+    --bg:#0a0d12; --panel:#0e131b; --ink:#eaf2ff; --muted:#94a3b8;
+    --acc:#00e5ff; --acc2:#7c7cff; --border:#18202b; --chip:#0f1a27;
+    --maxw:1040px; --radius:16px; --shadow:0 12px 36px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; line-height:1.6; color:var(--ink);
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Noto Sans, Arial;
+    background:
+      radial-gradient(1200px 600px at 20% -10%, #0f1a2a 0%, transparent 60%),
+      radial-gradient(1000px 600px at 110% 0%, #11152b 0%, transparent 50%),
+      linear-gradient(180deg,#080a10,#0b1119 20%,#070a0f);
+  }
+  a{color:var(--acc); text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .top{position:sticky; top:0; z-index:50; background:linear-gradient(180deg,rgba(10,13,18,.85),rgba(10,13,18,.55)); backdrop-filter: blur(8px); border-bottom:1px solid var(--border)}
+  .top .inner{max-width:var(--maxw); margin:auto; padding:10px 18px; display:flex; align-items:center; justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.3px}
+  .brand .dot{width:10px;height:10px;border-radius:50%; background:conic-gradient(from 0deg,var(--acc),var(--acc2)); box-shadow:0 0 12px var(--acc)}
+  .nav a{margin-left:16px; color:var(--muted)}
+  .wrap{max-width:var(--maxw); margin:auto; padding:20px}
+
+  header.hero{
+    position:relative; margin:22px 0; padding:28px; border:1px solid var(--border); border-radius:20px;
+    background: linear-gradient(180deg,rgba(17,27,41,.8),rgba(12,18,28,.9)) padding-box,
+               linear-gradient(135deg, rgba(0,229,255,.35), rgba(124,124,255,.3)) border-box;
+    box-shadow:var(--shadow);
+    display:grid; gap:20px; grid-template-columns: 96px 1fr auto; align-items:center;
+  }
+  .avatar{width:96px;height:96px;border-radius:16px;object-fit:cover;border:1px solid var(--border);background:#0b0f16}
+  h1{margin:0; font-size:clamp(28px,4vw,40px)}
+  .subtitle{color:var(--muted); margin-top:4px}
+  .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+  .badge{background:var(--chip); border:1px solid var(--border); border-radius:999px; padding:6px 10px; font-size:14px}
+  .cta{display:flex; gap:10px}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:12px; border:1px solid var(--border); background:#0c121b; cursor:pointer; transition:transform .08s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:linear-gradient(135deg,var(--acc),var(--acc2)); color:#061018; font-weight:800; border-color:transparent}
+
+  .grid{display:grid; gap:18px; grid-template-columns:repeat(12,1fr)}
+  .col-8{grid-column: span 8} .col-4{grid-column: span 4}
+  .panel{background:linear-gradient(180deg,#0b121b,#0c121c); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow)}
+  h2{margin:0 0 12px; font-size:18px; letter-spacing:.25px}
+  .muted{color:var(--muted)}
+  .list{margin:0; padding-left:18px} .list li{margin:0 0 10px}
+
+  /* EXPERIENCIA – tuning */
+  #exp .panel{position: relative; border-radius: 14px}
+  #exp .panel::before{content:""; position:absolute; inset:12px auto 12px 10px; width:3px; border-radius:3px; background: linear-gradient(180deg, #00e5ff, #7c7cff); opacity:.85}
+  #exp .role-head{display:grid; grid-template-columns: 1fr auto; align-items: baseline; gap:12px; margin-bottom: 8px}
+  #exp .role-head .empresa{ font-weight:650 } #exp .role-head .periodo{ color: var(--muted); font-weight:500 }
+  #exp ul.list{list-style: none; padding-left: 0; margin: 10px 0 0 0}
+  #exp ul.list li{position: relative; padding-left: 20px; margin: 10px 0; line-height: 1.65}
+  #exp ul.list li::before{content:""; position:absolute; left:0; top:0.72em; width:8px; height:8px; border-radius:50%; background: radial-gradient(circle at 30% 30%, #fff 0 25%, #00e5ff 55%, #00e5ff 60%, transparent 61%); opacity:.9}
+  #exp .stack{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+  #exp .stack .pill{font-size:12px; line-height:1; padding:6px 9px; background: color-mix(in oklab, var(--panel) 85%, #0f1622 15%); border:1px solid color-mix(in oklab, var(--border) 80%, #2a3952 20%); border-radius: 999px}
+
+  .cards{display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .card{border:1px solid var(--border); border-radius:14px; padding:14px; background:#0f1622}
+  .card b{display:block; margin-bottom:4px}
+  .pill{display:inline-block; font-size:12px; padding:3px 8px; border-radius:999px; border:1px solid var(--border); background:#0c131d; margin-right:8px}
+
+  .kpis{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .kpi{border:1px dashed var(--border); border-radius:14px; padding:12px} .kpi b{font-size:22px}
+  .stack{display:flex; flex-wrap:wrap; gap:8px}
+
+  footer{opacity:.7; margin:22px auto; max-width:var(--maxw); text-align:center; font-size:14px}
+
+  @media (max-width:900px){header.hero{grid-template-columns:72px 1fr} .col-8, .col-4{grid-column:1 / -1}}
+  @media print{body{background:#fff; color:#000} .top,.cta,.nav{display:none} .panel,header.hero{box-shadow:none} a{color:#000; text-decoration:none}}
+</style>
+</head>
+<body>
+
+<!-- TOP -->
+<div class="top">
+  <div class="inner">
+    <div class="brand"><span class="dot"></span> <span>Emmanuel A. Orona Espinosa</span></div>
+    <div class="nav">
+      <a href="#exp">Experiencia</a>
+      <a href="#proy">Proyectos</a>
+      <a href="#edu">Educación</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#" onclick="window.print()">PDF</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+ <img class="avatar" src="Picture2.png" alt="Foto de Emmanuel A. Orona" width="96" height="96" />
+
+    <div>
+      <h1>Ingeniero en Sistemas — Especialidad en Desarrollo de Software</h1>
+      <div class="subtitle">Tijuana, Baja California · Nac. 08/01/2000</div>
+      <div class="subtitle">
+        <a href="mailto:emmanueloespinosa3@gmail.com">emmanueloespinosa3@gmail.com</a> ·
+        <a href="tel:+526647492941">664 749 2941</a> / <a href="tel:+526634893808">663 489 3808</a>
+      </div>
+      <div class="badges">
+        <span class="badge">Linux</span><span class="badge">Redes</span><span class="badge">Ubiquiti</span>
+        <span class="badge">Moodle</span><span class="badge">Google Workspace</span>
+        <span class="badge">VPS & Dominios</span><span class="badge">Soporte Técnico</span>
+        <span class="badge">Telefonía IP / PBX</span><span class="badge">Android Studio</span>
+      </div>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#contacto">Contrátame</a>
+      <a class="btn" href="#proy">Ver proyectos</a>
+    </div>
+  </header>
+
+  <!-- GRID -->
+  <section class="grid">
+    <!-- MAIN -->
+    <div class="col-8">
+      <div class="panel">
+        <h2>Perfil profesional</h2>
+        <p class="muted">
+          Profesional en sistemas con más de 3 años de experiencia en soporte técnico, administración y mantenimiento de equipos de cómputo.
+          Experiencia en plataformas educativas (GES Educativo, Moodle), sistemas de tickets, administración de VPS/hosting, dominios y correo;
+          gestión de cuentas en Google Workspace for Education y atención a usuarios.
+        </p>
+      </div>
+
+      <!-- EXPERIENCIA -->
+      <div id="exp">
+        <!-- Cruz Roja 2024–presente -->
+        <div class="panel">
+          <h2>Experiencia</h2>
+          <div class="role">
+            <div class="role-head">
+              <div class="empresa"><strong>Auxiliar de Sistemas — Cruz Roja Mexicana · Delegación Tijuana</strong></div>
+              <div class="periodo">Mayo 2024 — Presente</div>
+            </div>
+            <ul class="list">
+              <li>Administración de la plataforma <b>GES Educativo 6</b>.</li>
+              <li>Configuración y mantenimiento de <b>servidores, switches, routers y APs</b>; disponibilidad de red.</li>
+              <li>Configuración de <b>Telefonía IP / PBX</b> (centralita IP).</li>
+              <li>Administración de <b>Moodle</b>.</li>
+              <li>Gestión de <b>VPS, hosting, dominios y servidores de correo</b>.</li>
+              <li>Mantenimiento preventivo/correctivo a cómputo, cámaras y <b>DVR</b>.</li>
+              <li>Administración de <b>Google Workspace</b> y soporte a usuarios.</li>
+              <li>Gestión de <b>impresoras de red y escáneres</b>.</li>
+            </ul>
+            <div class="stack">
+              <span class="pill">Ubiquiti</span><span class="pill">VLANs/DHCP</span><span class="pill">Linux</span>
+              <span class="pill">Moodle</span><span class="pill">GES 6</span><span class="pill">PBX IP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Turbo Tecnología 2024 -->
+        <div class="panel">
+          <div class="role-head">
+            <div class="empresa"><strong>Practicante de Sistemas — Turbo Tecnología de Reparaciones S.A. de C.V.</strong></div>
+            <div class="periodo">Ene 2024 — Mayo 2024</div>
+          </div>
+          <ul class="list">
+            <li>Soporte técnico (hardware/software) y mantenimiento preventivo/correctivo a PCs y laptops.</li>
+            <li>Inventarios TI en <b>ServiceNow</b> y aseguramiento de disponibilidad.</li>
+            <li>Configuración de aplicaciones y S.O. (Windows 7/8/10/11) según requerimientos.</li>
+          </ul>
+        </div>
+
+        <!-- Cruz Roja 2023 prácticas -->
+        <div class="panel">
+          <div class="role-head">
+            <div class="empresa"><strong>Practicante de Sistemas — Cruz Roja Mexicana · Delegación Tijuana</strong></div>
+            <div class="periodo">Mar 2023 — Sep 2023</div>
+          </div>
+          <ul class="list">
+            <li>Configuración de routers y switches para optimizar la red.</li>
+            <li>Cableado estructurado y mantenimiento a equipos de cómputo.</li>
+            <li>Soporte a usuarios y resolución de conectividad.</li>
+          </ul>
+        </div>
+
+        <!-- Carls Jr -->
+        <div class="panel">
+          <div class="role-head">
+            <div class="empresa"><strong>Empleado General — Carl’s Jr.</strong></div>
+            <div class="periodo">Dic 2021 — Mar 2023</div>
+          </div>
+          <ul class="list">
+            <li>Atención a clientes, operación de caja y preparación de alimentos.</li>
+            <li>Gestión de pedidos Rappi/Uber Eats y orden de bodega.</li>
+          </ul>
+        </div>
+
+        <!-- Logica.mx -->
+        <div class="panel">
+          <div class="role-head">
+            <div class="empresa"><strong>Practicante de Programación — Logica.mx</strong></div>
+            <div class="periodo">Oct 2021 — Mar 2022</div>
+          </div>
+          <ul class="list">
+            <li>Diseño y desarrollo de ventanas para el sistema SAH.</li>
+            <li>Pruebas y documentación técnica.</li>
+            <li>Corrección de errores y módulos nuevos.</li>
+          </ul>
+        </div>
+
+        <!-- Ayuntamiento -->
+        <div class="panel">
+          <div class="role-head">
+            <div class="empresa"><strong>Practicante Administrativo — Ayuntamiento de Tijuana</strong></div>
+            <div class="periodo">Mar 2018 — Jul 2018</div>
+          </div>
+          <ul class="list">
+            <li>Captura de documentos y elaboración de reportes en Excel/Word.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PROYECTOS -->
+      <div class="panel" id="proy">
+        <h2>Proyectos implementados</h2>
+        <div class="cards">
+          <div class="card">
+            <b>Bitácora de Registro de Uso — Biblioteca</b>
+            <p class="muted">Windows Forms (C#). Registro de uso de equipos, control administrativo y ahorro de papel/tinta. (Nov 2024)</p>
+            <div><span class="pill">C#</span><span class="pill">Windows Forms</span></div>
+          </div>
+          <div class="card">
+            <b>App Cronómetro para Área de Choque — Urgencias</b>
+            <p class="muted">Android (Java). Control de tiempos clínicos; registro offline y panel. (Oct 2025)</p>
+            <div><span class="pill">Android</span><span class="pill">Java</span></div>
+          </div>
+          <div class="card">
+            <b>Implementación Moodle — Escuela de Enfermería y Centro de Capacitación</b>
+            <p class="muted">Despliegue, administración y soporte a cursos/diplomados. (Oct 2025)</p>
+            <div><span class="pill">Moodle</span><span class="pill">Linux</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LOGROS (placeholder si quieres métricas cuantitativas) -->
+      <div class="panel">
+        <h2>Logros</h2>
+        <div class="kpis">
+          <div class="kpi"><span class="muted">Soporte</span><div><b>+3 años</b> resolviendo incidencias y manteniendo operación.</div></div>
+          <div class="kpi"><span class="muted">Plataformas</span><div><b>Moodle / GES / GW</b> administradas en producción.</div></div>
+          <div class="kpi"><span class="muted">Infra</span><div><b>Redes / PBX</b> configuradas y mantenidas.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside class="col-4">
+      <div class="panel" id="edu">
+        <h2>Educación</h2>
+        <ul class="list">
+          <li><strong>Instituto Tecnológico de Tijuana</strong> — Ing. en Sistemas Computacionales (2019–2023), Tijuana BC.</li>
+          <li><strong>CBTIS 146</strong> — Bachillerato (2015–2018), Tijuana BC.</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>Competencias técnicas</h2>
+        <div class="stack">
+          <span class="badge">Soporte a usuarios</span><span class="badge">Anydesk/TeamViewer/RDP</span>
+          <span class="badge">Windows XP–11 / Ubuntu / macOS / iOS / Android</span>
+          <span class="badge">Mantenimiento cómputo, proyectores</span><span class="badge">Cámaras y DVR</span>
+          <span class="badge">Telefonía y PBX IP</span><span class="badge">Administración de red</span>
+          <span class="badge">Portal cautivo / WPA3</span><span class="badge">Google Workspace for Education</span>
+          <span class="badge">VPS, dominios, correo</span><span class="badge">Moodle</span><span class="badge">XAMPP/WAMP</span>
+          <span class="badge">GitHub</span><span class="badge">Visual Studio</span><span class="badge">Android Studio</span>
+          <span class="badge">phpMyAdmin</span><span class="badge">Herramientas de IA</span>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Certificaciones</h2>
+        <ul class="list">
+          <li>Fundamentos de UX — FT Ed 2 (feb 2025)</li>
+          <li>Introducción a Ciberseguridad — FT Ed 2 (feb 2025)</li>
+          <li>Primer Correspondiente en Primeros Auxilios — Cruz Roja Mexicana Tijuana (mar 2025)</li>
+          <li>Lectura y analítica digital con IA — eLibro (2 ago 2025)</li>
+          <li>Fundamentos en IA para bibliotecas académicas — eLibro iIA (25 ago 2025)</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>Idiomas</h2>
+        <ul class="list">
+          <li>Español — Nativo</li>
+          <li>Inglés — A2</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <h2>Información adicional</h2>
+        <ul class="list">
+          <li>Visa B-2 EUA (turista)</li>
+          <li>Licencia de Conducir Tipo A</li>
+        </ul>
+      </div>
+
+      <div class="panel" id="contacto">
+        <h2>Contacto</h2>
+        <ul class="list">
+          <li><a href="mailto:emmanueloespinosa3@gmail.com">emmanueloespinosa3@gmail.com</a></li>
+          <li><a href="tel:+526647492941">664 749 2941</a> / <a href="tel:+526634893808">663 489 3808</a></li>
+          <li>Tijuana, Baja California · México</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <footer>Última actualización: <span id="last"></span> · © <span id="year"></span> Emmanuel A. Orona Espinosa</footer>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('last').textContent = new Date().toLocaleDateString('es-MX');
+</script>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Emmanuel Alejandro Orona Espinosa",
+  "jobTitle":"Ingeniero en Sistemas (Desarrollo de Software)",
+  "email":"mailto:emmanueloespinosa3@gmail.com",
+  "telephone":"+52 664 749 2941",
+  "url":"https://emmanuelxxoo.github.io",
+  "address":{"@type":"PostalAddress","addressLocality":"Tijuana","addressRegion":"BC","addressCountry":"MX"},
+  "knowsAbout":["Linux","Redes","Ubiquiti","Moodle","Google Workspace","Telefonía IP","Android Studio","VPS","Dominios","Soporte técnico"]
+}
+</script>
+</body>
+</html>
